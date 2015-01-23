@@ -1,48 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>StartUpRuhrpott</title>
+  <title><%= yield(:title) %> | StartUp Ruhrpott </title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
 </head>
 <body>
+  <%= render 'shared/navbar' %>
 
+  <!--<div class="main-page-content <%#= controller.controller_name %>">-->
+    <%= yield %>
+  <!--</div>-->
 
-<div class="container">
-  <div class="header clearfix">
-    <h1>Start Up Ruhrpott</h1>
-
-    <div class="nav">
-      <input type="checkbox" id="toggle" />
-      <label for="toggle" class="toggle" onclick></label>
-      <ul class="menu">
-        <li><%= link_to "Startseite", page_Startseite_path() %></li>
-        <li><%= link_to "Funding", page_Funding_path() %></li>
-        <li><%= link_to "Start Ups", page_StartUps_path() %></li>
-      </ul>
-    </div><!-- End of Navigation -->
-
-
-  </div><!-- End of Header -->
-
-  <%= yield %>
-
-</div><!-- End of Container -->
-
-
-
-<div class="footer">
-  <p>&copy; 2015 Benjamin Spinola</p>
-</div>
-
-
-
-
-
-
-
+  <%= render 'shared/footer' %>
 
 </body>
 </html>
