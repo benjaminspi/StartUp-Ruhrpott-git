@@ -14,7 +14,8 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li class="<%= yield(:Startseite) %>"><%= link_to "Startseite", page_Startseite_path() %></li>
+        <li class="<%= yield(:Startseite) %>"><%= link_to "Home", page_Startseite_path() %></li>
+        <li class="<%= yield(:ProductOfTheWeek) %>"><%= link_to "Produkt der Woche", product_of_the_weeks_path() %></li>
         <li class="<%= yield(:Funding) %>"><%= link_to "Funding", page_Funding_path() %></li>
         <li class="<%= yield(:StartUps) %>"><%= link_to "Start Ups", page_StartUps_path() %></li>
       </ul>

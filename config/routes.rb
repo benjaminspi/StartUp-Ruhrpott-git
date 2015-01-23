@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :product_of_the_weeks
+
   get 'page/Startseite'
 
   get 'page/StartUps'
