@@ -8548,7 +8548,12 @@ button.close {
     display: none !important;
   }
 }
-/* line 1, /Users/benjaminspinola/WebProjects/StartUpRuhrpott/app/assets/stylesheets/custom.css.scss */
+/* line 3, /Users/benjaminspinola/WebProjects/StartUpRuhrpott/app/assets/stylesheets/custom.css.scss */
 body > .container {
   padding-top: 60px;
+}
+
+/* line 9, /Users/benjaminspinola/WebProjects/StartUpRuhrpott/app/assets/stylesheets/custom.css.scss */
+ul.nav a:hover {
+  background-color: #e7e7e7 !important;
 }
