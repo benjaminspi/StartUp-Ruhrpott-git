@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :product_of_the_weeks
 
   get 'page/Startseite'
