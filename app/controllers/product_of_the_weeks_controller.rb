@@ -1,5 +1,6 @@
 class ProductOfTheWeeksController < ApplicationController
   before_action :set_product_of_the_week, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!, except: [:index]
 
   # GET /product_of_the_weeks
   # GET /product_of_the_weeks.json

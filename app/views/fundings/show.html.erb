@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @funding.name %>
+</p>
+
+<p>
+  <strong>Adress:</strong>
+  <%= @funding.adress %>
+</p>
+
+<p>
+  <strong>Focus:</strong>
+  <%= @funding.focus %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @funding.url %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @funding.art %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @funding.description %>
+</p>
+
+<p>
+  <strong>Thumbnail:</strong>
+  <%= @funding.thumbnail %>
+</p>
+
+<%= link_to 'Edit', edit_funding_path(@funding) %> |
+<%= link_to 'Back', fundings_path %>

@@ -8,18 +8,20 @@
 
 </head>
 <body>
+<!-- Wrap all page content here -->
+
   <%= render 'shared/navbar' %>
 
+  <% flash.each do |name, msg| %>
   <div class="container">
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <%= content_tag :div, msg, id: "flash_#{name}" %>
   </div>
+  <% end %>
 
-  <!--<div class="main-page-content <%#= controller.controller_name %>">-->
+
+  <div class="container">
     <%= yield %>
-  <!--</div>-->
-
-  <%= render 'shared/footer' %>
+  </div>
 
 </body>
 </html>

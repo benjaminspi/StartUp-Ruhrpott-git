@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150125124539) do
+ActiveRecord::Schema.define(version: 20150127155757) do
+
+  create_table "fundings", force: true do |t|
+    t.string   "name"
+    t.text     "adress"
+    t.string   "focus"
+    t.string   "url"
+    t.text     "description"
+    t.string   "thumbnail"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "art"
+  end
 
   create_table "product_of_the_weeks", force: true do |t|
     t.string   "name"

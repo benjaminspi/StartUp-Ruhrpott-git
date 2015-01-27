@@ -7,3 +7,18 @@ body > .container{
 
 //Navbar
 ul.nav a:hover { background-color: #e7e7e7 !important; }
+
+//remove margin for jumbotron (Startseite)
+.jumbotron{
+  margin-top: -80px !important;
+  background-image: url('/assets/home-background.jpeg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-origin: content-box;
+  background-color: #ffffff;
+}
+
+.jumbotron > .container > h1,.jumbotron > .container > p,  {
+  color: #ffffff;
+  text-shadow: 1px 1px 6px #000000;
+}

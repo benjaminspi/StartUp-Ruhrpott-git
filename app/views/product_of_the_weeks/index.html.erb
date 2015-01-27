@@ -4,63 +4,51 @@
 <div class="container">
 
   <div class="blog-header">
-    <h1 class="blog-title">Produkt der Woche</h1>
-    <p class="lead blog-description">Jede Woche das beste Produkt aus der Start Up Welt</p>
+    <h1 class="blog-title">Start Up Produkt der Woche</h1>
   </div>
+
+  <hr>
 
   <% @product_of_the_weeks.each do |product_of_the_week| %>
 
   <div class="row">
 
-    <div class="col-sm-3 blog-main">
+    <div class="col-sm-11 blog-main">
       <div class="blog-post">
-        <h2 class="blog-post-title">&nbsp;</h2>
-        <p><img src="<%= product_of_the_week.picture %>"></p>
-      </div><!-- /.blog-post -->
-    </div><!-- /.blog-main -->
+        <h2 class="blog-post-title"><%= product_of_the_week.name %></h2>
+        <p class="blog-post-meta"><%= product_of_the_week.date.strftime("%d.%m.%Y")  %></p>
+        <div class="media">
+          <div class="media-left">
+              <img class="media-object" src="<%= product_of_the_week.picture %>" alt="...">
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">
+              <a href="<%= product_of_the_week.link %>"><%= product_of_the_week.link %></a>
+            </h4>
 
-    <div class="col-sm-2 blog-main">
-      <div class="blog-post">
-        &nbsp;
-      </div><!-- /.blog-post -->
-    </div><!-- /.blog-main -->
+            <%= product_of_the_week.description %>
+          </div>
+        </div>
 
-    <div class="col-sm-7 blog-main">
-
-        <div class="blog-post">
-
-          <h2 class="blog-post-title"><%= product_of_the_week.name %></h2>
-          <p class="blog-post-meta"><%= product_of_the_week.date %></p>
-          <p><%= product_of_the_week.description %></p>
-          <p><a href="<%= product_of_the_week.link %>"><%= product_of_the_week.link %></a>
-          </p>
+        <% if user_signed_in? %>
           <p>
             <% product_of_the_week.published %>
             <%= link_to 'Show', product_of_the_week %><br>
             <%= link_to 'Edit', edit_product_of_the_week_path(product_of_the_week) %><br>
             <%= link_to 'Destroy', product_of_the_week, method: :delete, data: { confirm: 'Are you sure?' } %>
           </p>
+        <% end %>
 
-        </div><!-- /.blog-post -->
-
-
+      </div><!-- /.blog-post -->
     </div><!-- /.blog-main -->
-
   </div><!-- /.row -->
 
   <hr>
 
   <% end %>
 
-  <nav>
-    <ul class="pager">
-      <li><a href="#">Previous</a></li>
-      <li><a href="#">Next</a></li>
-    </ul>
-  </nav>
-
-  <p><%= link_to 'New Product of the week', new_product_of_the_week_path %></p>
+  <% if user_signed_in? %>
+    <p><%= link_to 'New Product of the week', new_product_of_the_week_path %></p>
+  <% end %>
 
 </div><!-- /.container -->
-
-

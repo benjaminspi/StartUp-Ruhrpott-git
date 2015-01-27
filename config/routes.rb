@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :fundings
+
   devise_for :users
   resources :product_of_the_weeks
 

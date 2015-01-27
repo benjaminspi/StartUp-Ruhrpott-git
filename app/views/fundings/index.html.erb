@@ -1,0 +1,57 @@
+<% provide(:Funding, 'active') %>
+<% provide(:title, 'Funding') %>
+
+<div class="container">
+
+  <div class="blog-header">
+    <h1 xmlns="http://www.w3.org/1999/html" class="blog-title">Funding für Start Ups</h1>
+  </div>
+
+  <hr>
+
+  <% @fundings.each do |funding| %>
+
+    <div class="row">
+
+      <div class="col-sm-11 blog-main">
+        <div class="blog-post">
+          <h2 class="blog-post-title"><%= funding.name %></h2>
+          <p class="blog-post-meta"><%= funding.updated_at.strftime("%d.%m.%Y")  %></p>
+          <div class="media">
+            <div class="media-left">
+              <img class="media-object" src="<%= funding.thumbnail %>" alt="...">
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">
+                <a href="<%= funding.url %>" target="_blank"><%= funding.url %></a>
+              </h4>
+              <p>
+                Typ: <%= funding.art %><br>
+                Standort: <%= funding.adress %><br>
+                Fokus Gebiet: <%= funding.focus %><br>
+              </p>
+              <p>Beschreibung: <%= funding.description %></p>
+            </div>
+          </div>
+
+          <% if user_signed_in? %>
+            <p>
+              <%= link_to 'Show', funding %>
+              <%= link_to 'Edit', edit_funding_path(funding) %>
+              <%= link_to 'Destroy', funding, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </p>
+          <% end %>
+
+        </div><!-- /.blog-post -->
+      </div><!-- /.blog-main -->
+    </div><!-- /.row -->
+
+    <hr>
+
+  <% end %>
+
+  <% if user_signed_in? %>
+    <p><%= link_to 'New Funding', new_funding_path %></p>
+  <% end %>
+
+</div><!-- /.container -->

@@ -1,0 +1,45 @@
+<%= form_for(@funding) do |f| %>
+  <% if @funding.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@funding.errors.count, "error") %> prohibited this funding from being saved:</h2>
+
+      <ul>
+      <% @funding.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :adress %><br>
+    <%= f.text_area :adress %>
+  </div>
+  <div class="field">
+    <%= f.label :focus %><br>
+    <%= f.text_field :focus %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br>
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
+    <%= f.label :art %><br>
+    <%= f.text_field :art %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :thumbnail %><br>
+    <%= f.text_field :thumbnail %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
