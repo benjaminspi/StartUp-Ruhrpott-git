@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @co_working.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @co_working.address %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @co_working.url %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @co_working.description %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= @co_working.picture %>
+</p>
+
+<%= link_to 'Edit', edit_co_working_path(@co_working) %> |
+<%= link_to 'Back', co_workings_path %>

@@ -9,29 +9,33 @@
   <div class="container">
     <p>&nbsp;</p>
     <p>&nbsp;</p>
-    <h1>Start Up Ruhrpott</h1>
+    <h1><span class="glyphicon glyphicon-signal" aria-hidden="true"></span> Start Up Ruhrpott</h1>
     <p>Die Startseite für Entrepreneure im Ruhrgebiet</p>
-    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+    <p>&nbsp;</p>
+    <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p> -->
   </div>
 </div>
 
 <div class="container" style="margin-top: -90px;">
   <!-- Example row of columns -->
   <div class="row">
+  
     <div class="col-md-4">
-      <h2>Heading</h2>
-      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+      <h2>Produkt der Woche</h2>
+      <p>Du findet hier jede Woche das beste Produkt aus der internationalen Welt der Start Ups. Regelmäßig vorbeischauen lohnt sich, denn hier verbergen sich die besten Tools und Gadgets, die auch Dein StartUp boosten.</p>
+      <p><%= link_to "Produkt der Woche &raquo;".html_safe, product_of_the_weeks_path(), class: "btn btn-primary" %></p>
     </div>
+
     <div class="col-md-4">
-      <h2>Heading</h2>
-      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+      <h2>Funding</h2>
+      <p>Hier findest Du die wichtigsten Organisationen und Personen zum Thema Funding / Finanzierung: Venture Capitalists, Business Angels, Acceleratoren und Incubatoren für StartUps aus dem Ruhrgebiet.</p>
+      <p><%= link_to "Funding &raquo;".html_safe, fundings_path(), class: "btn btn-success" %></p>
     </div>
+    
     <div class="col-md-4">
-      <h2>Heading</h2>
-      <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+      <h2>CoWorking Spaces</h2>
+      <p>Kein Platz in den eigenen 4 Wänden für Dein StartUp-Team? Du suchst nach guten Kontakten zur Umsetzung Deines Produktes, Deiner Website oder App? Dann lass Dich in einem CoWorking Space blicken.</p>
+      <p><%= link_to "CoWorking Spaces &raquo;".html_safe, co_workings_path(), class: "btn btn-info" %></p>
     </div>
   </div>
 

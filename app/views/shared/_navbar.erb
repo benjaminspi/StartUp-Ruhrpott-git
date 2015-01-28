@@ -8,7 +8,9 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href=""><span class="glyphicon glyphicon-signal" aria-hidden="true"></span> Start Up Ruhrpott</a>
+      <%= link_to "<span class='glyphicon glyphicon-signal' aria-hidden='true'></span> Start Up Ruhrpott".html_safe, page_Startseite_path(), class: "navbar-brand" %>
+
+      <a class="navbar-brand" href=""></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -17,7 +19,7 @@
         <li class="<%= yield(:Startseite) %>"><%= link_to "Home", page_Startseite_path() %></li>
         <li class="<%= yield(:ProductOfTheWeek) %>"><%= link_to "Produkt der Woche", product_of_the_weeks_path() %></li>
         <li class="<%= yield(:Funding) %>"><%= link_to "Funding", fundings_path() %></li>
-        <li class="<%= yield(:StartUps) %>"><%= link_to "Start Ups", page_StartUps_path() %></li>
+        <li class="<%= yield(:CoWorkingSpaces) %>"><%= link_to "CoWorking Spaces", co_workings_path() %></li>
         <% if user_signed_in? %>
           <li><%= link_to 'Profil', edit_user_registration_path %></li>
           <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>

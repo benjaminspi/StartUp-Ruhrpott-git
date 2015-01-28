@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :co_workings
+
   resources :fundings
 
   devise_for :users

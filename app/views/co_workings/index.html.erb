@@ -1,0 +1,56 @@
+<% provide(:CoWorkingSpaces, 'active') %>
+<% provide(:title, 'CoWorking Spaces') %>
+
+<div class="container">
+
+  <div class="blog-header">
+    <h1 xmlns="http://www.w3.org/1999/html" class="blog-title">CoWorking Spaces</h1>
+  </div>
+
+  <hr>
+
+  <% @co_workings.each do |co_working| %>
+
+    <div class="row">
+
+      <div class="col-sm-11 blog-main">
+        <div class="blog-post">
+          <h2 class="blog-post-title"><%= co_working.name %></h2>
+          <p class="blog-post-meta"><%= co_working.updated_at.strftime("%d.%m.%Y")  %></p>
+          <div class="media">
+            <div class="media-left">
+              <img class="media-object" src="<%= co_working.picture %>" alt="...">
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">
+                <a href="<%= co_working.url %>" target="_blank"><%= co_working.url %></a>
+              </h4>
+              <p>
+                Standort: <%= co_working.address %><br>
+              </p>
+              <p>Beschreibung: <%= co_working.description %></p>
+            </div>
+          </div>
+
+          <% if user_signed_in? %>
+            <p>
+              <%= link_to 'Show', co_working %>
+              <%= link_to 'Edit', edit_co_working_path(co_working) %>
+              <%= link_to 'Destroy', co_working, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </p>
+          <% end %>
+
+        </div><!-- /.blog-post -->
+      </div><!-- /.blog-main -->
+    </div><!-- /.row -->
+
+    <hr>
+
+  <% end %>
+
+  <% if user_signed_in? %>
+    <p><%= link_to 'New Co working', new_co_working_path %></p>
+  <% end %>
+
+</div><!-- /.container -->
+
