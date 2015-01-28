@@ -10,6 +10,10 @@ Rails.application.routes.draw do
 
   get 'page/Funding'
 
+  get 'page/Impressum'
+
+  get 'page/Datenschutz'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

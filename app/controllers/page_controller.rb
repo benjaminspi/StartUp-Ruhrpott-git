@@ -16,4 +16,12 @@ class PageController < ApplicationController
     # }
 
   end
+
+  def Impressum
+  end
+
+  def Datenschutz
+  end
+
+
 end
