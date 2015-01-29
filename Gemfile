@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0' # or other from link above
+ruby '2.1.4' # or other from link above
 
 # Gem for uploading pictures
 gem "paperclip", "~> 4.2"
