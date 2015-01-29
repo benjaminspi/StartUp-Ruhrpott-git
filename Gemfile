@@ -2,6 +2,12 @@ source 'https://rubygems.org'
 
 ruby "2.1.1"
 
+# Gem for uploading pictures
+gem "paperclip", "~> 4.2"
+
+# Gem to use Imagemagick on Heroku to make paperclip work (i.e. resizing pictures)
+gem 'rmagick', '2.13.2'
+
 gem 'rails_12factor'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
