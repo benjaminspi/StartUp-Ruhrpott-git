@@ -70,6 +70,6 @@ class ProductOfTheWeeksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_of_the_week_params
-      params.require(:product_of_the_week).permit(:name, :description, :date, :link, :published, :picture)
+      params.require(:product_of_the_week).permit(:name, :description, :date, :link, :published, :picture, :photo)
     end
 end

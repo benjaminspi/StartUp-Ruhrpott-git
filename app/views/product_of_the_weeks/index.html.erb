@@ -19,7 +19,7 @@
         <p class="blog-post-meta"><%= product_of_the_week.date.strftime("%d.%m.%Y")  %></p>
         <div class="media">
           <div class="media-left">
-              <img class="media-object" src="<%= product_of_the_week.picture %>" alt="...">
+              <%= image_tag(product_of_the_week.photo.url(:small), :class => "media-object") %>
           </div>
           <div class="media-body">
             <h4 class="media-heading">
@@ -50,5 +50,8 @@
   <% if user_signed_in? %>
     <p><%= link_to 'New Product of the week', new_product_of_the_week_path %></p>
   <% end %>
+  <p>
+    &nbsp;
+  </p>
 
 </div><!-- /.container -->

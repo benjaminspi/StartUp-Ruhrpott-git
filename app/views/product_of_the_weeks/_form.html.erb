@@ -1,4 +1,4 @@
-<%= form_for(@product_of_the_week) do |f| %>
+<%= form_for @product_of_the_week, :html => {:multipart => true} do |f| %>
   <% if @product_of_the_week.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@product_of_the_week.errors.count, "error") %> prohibited this product_of_the_week from being saved:</h2>
@@ -35,6 +35,9 @@
     <%= f.label :picture %><br>
     <%= f.text_field :picture %>
   </div>
+  <p>
+    <%= f.file_field :photo %>
+  </p>
   <div class="actions">
     <%= f.submit %>
   </div>
